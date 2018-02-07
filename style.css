@@ -950,8 +950,7 @@ button a {
 .site-branding a:hover {
 	text-decoration: none;
 }
-.site-branding,
-.navbar {
+.site-branding, .navbar {
 	display: inline-block;
 }
 
