@@ -1,11 +1,11 @@
 <div id="about">
-	<h1>Hi, I'm Santa. I help people grow and heal.</h1>
 	<div class="row">
 		<div class="col-xs-12 col-md-5 center-wp-img"><?php echo wp_get_attachment_image( 1372, "full")?></div>
 		<div class="col-xs-12 col-md-7">
-			<p>After 25 successful years in corporate America, I am following my passion, using life coaching to help others reach their personal and professional goals.</p>
-			<p>Through life coaching, I help clients know themselves better and realize their potential.</p>
-			<p>I ask a series of strategic questions to help clients identify goals, section steps, and move confidently towards success.</p>
+			<h2>Hi, I'm Santa. I help people grow and heal.</h2>
+			<p>Apple pie liquorice soufflé tart gummies I love. Gummi bears I love topping macaroon bonbon oat cake candy ice cream. Fruitcake I love cookie cookie. Macaroon croissant chupa chups. Pudding gingerbread gummies marzipan tiramisu tart lollipop I love tootsie roll. Cookie tootsie roll I love carrot cake lollipop cake lemon drops chocolate bar cheesecake. I love brownie lemon drops wafer jelly cookie. Pudding sweet roll chocolate marzipan croissant jelly beans chocolate bar candy chocolate cake.</p>
+
+			<p>Soufflé dragée sweet roll lemon drops icing cake jelly-o I love I love. Tiramisu biscuit croissant cotton candy lollipop chocolate marzipan dragée chocolate bar. I love danish soufflé gummies bear claw. Tootsie roll biscuit chocolate bar dessert bonbon halvah I love. I love muffin bear claw sweet cake chocolate bar I love I love caramels. Donut jelly beans pudding apple pie oat cake.</p>
 		</div>
 	</div>
 </div>

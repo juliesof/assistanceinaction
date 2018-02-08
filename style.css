@@ -118,7 +118,7 @@ dfn {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2.5em;
 	margin: 0.67em 0;
 	text-align: center;
 }
@@ -930,10 +930,11 @@ button a {
 
 /* Contact header */
 #contact-info-header{
-	padding: .65em;
+	padding: 5px 0;
 	background-color: rgb(230,230,250);
 	width: 100%;
-	text-align: center;
+	text-align: right;
+	font-size: 14px
 	line-height: 2.25em;
 }
 .contact-info a,
@@ -982,9 +983,12 @@ button a {
 
 /* Front Page Teaser */
 #teaser-frontpage {
-	background-color: #ffffe0;
+	background: linear-gradient( 
+				rgb(230,230,250) 70%,
+				rgb(255,255,255)
+			)
 }
-#teaser-header{
+#teaser-header{	
 	text-align: center;
 }
 #teaser-frontpage h3 {
@@ -1001,7 +1005,6 @@ button a {
 	color: white;
 	text-align: center;
 	padding: 0;
-	margin: 1em;
 }
 .service-box img {
 	width: 100%
@@ -1048,16 +1051,18 @@ button a {
 /* Media query 767px*/
 @media (min-width: 767px) {
 	/* Elements */
-h1.text {
-	font-size: 78px;
-}
-h2.text {
-	font-size: 52px;
-}
-#contact-info-header .contact-info {
-	display: inline-block;
-	margin-right: 2em;
-}
+	h1.text {
+		font-size: 58px;
+	}
+	h2.text {
+		font-size: 32px;
+	}
+	#contact-info-header .contact-info {
+		display: inline-block;
+	}
+	#header-email {
+		margin: 0 6em 0 2em;
+	}
 	.site-footer {
 		background: 
 			linear-gradient( 
@@ -1088,7 +1093,11 @@ h2.text {
 	/* Teaser section */
 	#teaser-frontpage {
 		position: relative;
-		background-color: rgba(234, 202, 202, .7);
+		border-top: 10px #201E50 solid;
+		background-color: rgb(230,230,250);
+; 
+		/*border-top: 10px #C976B4 solid;*/
+		/*background-color: #FFEFF3;*/
 		padding-top: .5em;
 		margin-right: auto;
 		margin-left: auto;

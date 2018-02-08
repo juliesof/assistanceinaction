@@ -36,11 +36,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'assistanceinaction' ); ?></a>
 
-	<div id="contact-info-header" >
+	<div id="contact-info-header">
 		<div id="header-phone" class="contact-info"><i class="fas fa-phone"></i><a href="tel:1-847-555-5555">
 			617-456-7890</a>
 		</div>
-		<div id="header-email" class="contact-info"><i class="fas fa-envelope-open"></i><a href="mailto:test@example.com"> test@email.com</a>
+		<div id="header-email" class="contact-info">  <i class="fas fa-envelope-open"></i><a href="mailto:test@example.com"> test@email.com</a>
 		</div>
 	</div>
 	<header id="masthead" class="site-header container">
@@ -65,11 +65,11 @@
 
 			
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggled-collapsed visible-sm-block pull-right" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
+			<!-- <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed visible-sm-block pull-right" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 	        		<i class="fas fa-bars fa-5x"></i>
-				</button>
+				</button> -->
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
    			 <div class="collapse navbar-collapse navbar-right" id="collapsed-menu-1">
