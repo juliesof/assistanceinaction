@@ -20,12 +20,6 @@
 	<!-- google font links -->
 	<link href="https://fonts.googleapis.com/css?family=Laila|Alegreya+Sans:100,300,400|Cinzel+Decorative" rel="stylesheet">
 
-	<!-- Include Bootstrap -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 	<!-- include font awesome -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
@@ -43,10 +37,10 @@
 		<div id="header-email" class="contact-info">  <i class="fas fa-envelope-open"></i><a href="mailto:test@example.com"> test@email.com</a>
 		</div>
 	</div>
-	<header id="masthead" class="site-header container">
-		<nav class="navbar navbar-default" role="navigation">
+	<header id="masthead" class="site-header">
+		<nav id="header-nav" class="navbar navbar-expand-lg navbar-default" role="navigation">
 			<!-- Display of company name and logo -->
-			<div class="site-branding navbar-brand">
+			<div class="site-branding navbar-brand container">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) : ?>
@@ -65,16 +59,18 @@
 
 			
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<!-- <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed visible-sm-block pull-right" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
+			<div class="navbar navbar-header">
+				<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
-	        		<i class="fas fa-bars fa-5x"></i>
-				</button> -->
+	        		<span class=”icon-bar”></span>
+	        		<span class=”icon-bar”></span>
+	        		<span class=”icon-bar”></span>
+				</button>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-   			 <div class="collapse navbar-collapse navbar-right" id="collapsed-menu-1">
+   			 	<div class="collapse navbar-collapse navbar-right" id="collapsed-menu-1">
    			 	<!-- <ul class="nav navbar-nav"> -->
-			     <?php
+			     	<?php
 							wp_nav_menu( array(
 						    'theme_location'    => 'menu-1',
 						    'menu' 							=> 'primary',
@@ -87,9 +83,9 @@
 						    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 						    'walker'            => new WP_Bootstrap_Navwalker(),
 							) );
-						?>
-					</div>
-				</div> <!-- end .navbar-header-->
+					?>
+				</div>
+			</div> <!-- end .navbar-header-->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

@@ -943,18 +943,18 @@ button a {
 }
 
 /* Navbar */
-.site-branding {
+/*.site-branding {
 	font-family: 'Cinzel Decorative', cursive;
 	font-size: 2em;
 	margin-top: 1em;
-}
+}*/
 .site-branding a:hover {
 	text-decoration: none;
 }
-.site-branding, 
+/*.site-branding, 
 .navbar {
 	display: inline-block;
-}
+}*/
 
 /*Front Page Hero*/
 #hero-section {

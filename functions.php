@@ -117,8 +117,15 @@ add_action( 'widgets_init', 'assistanceinaction_widgets_init' );
  * Enqueue scripts and styles.
  */
 function assistanceinaction_scripts() {
+
+	$theme = wp_get_theme( 'assistanceinaction' );
+    $version = $theme->get( 'Version' );
+
+	wp_enqueue_style( 'onepress-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', false, $version );
 	wp_enqueue_style( 'assistanceinaction-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'assistanceinaction-js-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), $version, true );
 	wp_enqueue_script( 'assistanceinaction-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'assistanceinaction-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
