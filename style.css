@@ -937,17 +937,19 @@ button a {
 	font-size: 14px
 	line-height: 2.25em;
 }
+.contact-info {
+	text-align: center;
+}
 .contact-info a,
 .contact-info a:hover {
 	color: #483D8B;
 }
 
 /* Navbar */
-/*.site-branding {
+.site-branding {
 	font-family: 'Cinzel Decorative', cursive;
 	font-size: 2em;
-	margin-top: 1em;
-}*/
+}
 .site-branding a:hover {
 	text-decoration: none;
 }
@@ -986,16 +988,23 @@ button a {
 	background: linear-gradient( 
 				rgb(230,230,250) 70%,
 				rgb(255,255,255)
-			)
+			);
+	padding: .75em 1.25em;
 }
 #teaser-header{	
 	text-align: center;
 }
+#teaser-frontpage h1 {
+	margin-bottom: 1.2em;
+}
 #teaser-frontpage h3 {
-	margin-top: .75em;
+	margin-bottom: .25em;
 }
 .first-teaser-question {
 	margin-top: -1.5em;
+}
+.teaser-question {
+	margin-bottom: 1em;
 }
 
 /* Services section */
@@ -1025,7 +1034,29 @@ button a {
 .service-box .service-content p {
 	font-size: 2em;
 }
+/* Testimonials */
+#front-page-testimonials {
+	width: 100%;
+	margin-bottom: 2.5em;
+}
+#front-page-testimonials button {
+	margin-right: auto;
+	margin-left: auto;
+}
 
+/* CTA section */
+#cta-bar {
+	text-align: center;
+	padding: 2.5em;
+	background: #201E50;
+	color: white;
+	line-height: 6em;
+}
+#front-page-cta-button button {
+	text-align: center;
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 1.25em;
+}
 /* Footer */
 .site-footer {
 	background-color: #063852;
@@ -1046,7 +1077,11 @@ button a {
 	margin-left: 0;
 }
 
-/*Front Page About Santa*/
+.site-info {
+	background-color: white;
+	text-align: center;
+	padding: .4em;
+}
 
 /* Media query 767px*/
 @media (min-width: 767px) {
@@ -1057,12 +1092,55 @@ button a {
 	h2.text {
 		font-size: 32px;
 	}
+
+	/* contact header */
 	#contact-info-header .contact-info {
 		display: inline-block;
 	}
-	#header-email {
-		margin: 0 6em 0 2em;
+	.contact-info {
+		text-align: right;
 	}
+	#header-email {
+		margin: 0 3.5em 0 2em;
+	}
+
+	/* Hero */
+	#hero-section {
+		z-index: 0;
+	}
+
+	/* Teaser section */
+	#teaser-frontpage {
+		position: relative;
+		border-top: 10px #201E50 solid;
+		background-color: rgb(230,230,250);
+		padding-top: .5em;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: -107px;
+		z-index: 3;
+	}
+	.teaser-content {
+		margin-top: 2em;
+	}
+	.first-teaser-question{
+		margin-top: 0px;
+	}
+	.teaser-question {
+		margin-left: 2em;
+		margin-right: 2em;
+		margin-bottom: 2em;
+	}
+	#teaser-frontpage h3 {
+		margin-top: 0;
+	}
+
+	/* cta bar */
+	#cta-bar {
+		padding: 3em;
+	}
+
+	/* footer section */
 	.site-footer {
 		background: 
 			linear-gradient( 
@@ -1076,51 +1154,8 @@ button a {
   background-size: cover;
 	}
 	.site-ankler {
-		height: 70vh;
 		text-align: center;
 		margin-top: 3em;
 		margin-bottom: 2em;
-	}
-	.site-info {
-		background-color: white;
-		text-align: center;
-	}
-	/* Hero */
-	#hero-section {
-		z-index: 0;
-	}
-
-	/* Teaser section */
-	#teaser-frontpage {
-		position: relative;
-		border-top: 10px #201E50 solid;
-		background-color: rgb(230,230,250);
-; 
-		/*border-top: 10px #C976B4 solid;*/
-		/*background-color: #FFEFF3;*/
-		padding-top: .5em;
-		margin-right: auto;
-		margin-left: auto;
-		margin-top: -123px;
-		z-index: 3;
-	}
-	.teaser-content {
-		margin-top: 3em;
-	}
-	.first-teaser-question {
-		margin-top: 0px;
-	}
-	.teaser-question {
-		margin-left: 2em;
-		margin-right: 2em;
-		margin-bottom: 2em;
-	}
-	#teaser-frontpage h3 {
-		margin-top: 0;
-	}
-
-	/* Services section */
-	.service-box {
-		height: ;
 	}
 }

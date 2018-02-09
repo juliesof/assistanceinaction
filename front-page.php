@@ -33,7 +33,11 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'about' ); ?>
 			<!-- Services section -->
 			<?php get_template_part( 'template-parts/content', 'services' ); ?>
+			<!-- Testimonials section -->
+			<?php get_template_part( 'template-parts/content', 'testimonials' ); ?>
 		</div>
+			<!-- Call to action bar -->
+			<?php get_template_part( 'template-parts/content', 'call-to-action-bar' ); ?>
 
 
 
