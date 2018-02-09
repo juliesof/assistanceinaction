@@ -19,6 +19,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 ---------- Base Styles -----------
 # Typography
+# Site Title
 # Elements
 # Front page
 	# Section 1
@@ -31,6 +32,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*---------- Base Styles --------------*/
 
 /* Typography */
+
 /* Site Title */
 .navbar-header h1 {
 	margin: 15px 0 10px;
@@ -43,8 +45,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	text-decoration: none;
 }
 
-
-
 /* Elements */
 .center-something {
 	margin-right: auto;
@@ -56,6 +56,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #services {
 	margin-bottom: 4.5em;
 }
+
 /* centers image created with wp_get_image_attachment */
 .center-wp-img {
 	text-align: center;
@@ -113,10 +114,10 @@ button a {
 }
 #teaser-frontpage h3 {
 	margin-bottom: .25em;
-}
+}/*
 .first-teaser-question {
 	margin-top: -1.5em;
-}
+}*/
 .teaser-question {
 	margin-bottom: 1em;
 }
@@ -157,9 +158,6 @@ button a {
 	margin-right: auto;
 	margin-left: auto;
 }
-#front-page-testimonials .fa-quote-left {
-	color: #8c41f4;
-}
 
 /* CTA section */
 #cta-bar {
@@ -181,7 +179,7 @@ button a {
 	background-color: rgb(230,230,250);
 	width: 100%;
 	text-align: right;
-	font-size: 14px
+	font-size: 14px;
 	line-height: 2.25em;
 }
 .contact-info {
@@ -246,26 +244,26 @@ button a {
 
 	/* Teaser section */
 	#teaser-frontpage {
-		position: relative;
+		/*position: relative;*/
 		border-top: 10px #201E50 solid;
 		background-color: rgb(230,230,250);
-		padding-top: .5em;
-		margin-right: auto;
-		margin-left: auto;
+		/*padding-top: .5em;*/
+		/*margin-right: auto;*/
+		/*margin-left: auto;*/
 		margin-top: -107px;
-		z-index: 3;
-	}
+		/*z-index: 3;*/
+	}/*
 	.teaser-content {
 		margin-top: 2em;
-	}
+	}*//*
 	.first-teaser-question{
 		margin-top: 0px;
-	}
-	.teaser-question {
+	}*/
+	/*.teaser-question {
 		margin-left: 2em;
 		margin-right: 2em;
 		margin-bottom: 2em;
-	}
+	}*/
 	#teaser-frontpage h3 {
 		margin-top: 0;
 	}
