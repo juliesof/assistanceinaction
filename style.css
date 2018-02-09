@@ -953,10 +953,6 @@ button a {
 .site-branding a:hover {
 	text-decoration: none;
 }
-/*.site-branding, 
-.navbar {
-	display: inline-block;
-}*/
 
 /*Front Page Hero*/
 #hero-section {
@@ -1042,6 +1038,9 @@ button a {
 #front-page-testimonials button {
 	margin-right: auto;
 	margin-left: auto;
+}
+#front-page-testimonials .fa-quote-left {
+	color: #8c41f4;
 }
 
 /* CTA section */

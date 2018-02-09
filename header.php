@@ -34,7 +34,7 @@
 		<div id="header-phone" class="contact-info"><i class="fas fa-phone"></i><a href="tel:1-847-555-5555">
 			617-456-7890</a>
 		</div>
-		<div id="header-email" class="contact-info">  <i class="fas fa-envelope-open"></i><a href="mailto:test@example.com"> test@email.com</a>
+		<div id="header-email" class="contact-info">  <i class="fas fa-envelope"></i><a href="mailto:test@example.com"> test@email.com</a>
 		</div>
 	</div>
 	<header id="masthead" class="site-header">

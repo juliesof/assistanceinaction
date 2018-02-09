@@ -29,7 +29,7 @@
 							<div class="footer-contact-info"><button>Free Consultation</button></div>
 							<div id="footer-phone" class="footer-contact-info"><i class="fas fa-phone"></i><a href="tel:1-847-555-5555">617-456-7890</a>
 							</div>
-							<div id="footer-email" class="footer-contact-info"><i class="fas fa-envelope-open"></i><a href="mailto:test@example.com"> test@email.com
+							<div id="footer-email" class="footer-contact-info"><i class="fas fa-envelope"></i><a href="mailto:test@example.com"> test@email.com
 							</div>
 					</div>
 			</div>
