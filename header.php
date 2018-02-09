@@ -30,11 +30,13 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'assistanceinaction' ); ?></a>
 
-	<div id="contact-info-header">
-		<div id="header-phone" class="contact-info"><i class="fas fa-phone"></i><a href="tel:617-456-7890">
-			617-456-7890</a>
-		</div>
-		<div id="header-email" class="contact-info">  <i class="fas fa-envelope"></i><a href="mailto:test@example.com"> test@email.com</a>
+	<div id="contact-info-header" class="container">
+		<div class="container">
+			<div id="header-phone" class="contact-info col"><i class="fas fa-phone"></i><a href="tel:617-456-7890">
+				617-456-7890</a>
+			</div>
+			<div id="header-email" class="contact-info col">  <i class="fas fa-envelope"></i><a href="mailto:test@example.com"> test@email.com</a>
+			</div>
 		</div>
 	</div>
 	<nav id="header-nav" class="navbar-default" role="navigation">
