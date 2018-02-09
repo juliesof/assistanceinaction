@@ -31,62 +31,44 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'assistanceinaction' ); ?></a>
 
 	<div id="contact-info-header">
-		<div id="header-phone" class="contact-info"><i class="fas fa-phone"></i><a href="tel:1-847-555-5555">
+		<div id="header-phone" class="contact-info"><i class="fas fa-phone"></i><a href="tel:617-456-7890">
 			617-456-7890</a>
 		</div>
 		<div id="header-email" class="contact-info">  <i class="fas fa-envelope"></i><a href="mailto:test@example.com"> test@email.com</a>
 		</div>
 	</div>
-	<header id="masthead" class="site-header">
-		<nav id="header-nav" class="navbar navbar-expand-lg navbar-default" role="navigation">
-			<!-- Display of company name and logo -->
-			<div class="site-branding navbar-brand container">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
-
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-				endif; ?>
-			</div><!-- .site-branding -->
-
-			
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar navbar-header">
-				<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
+	<nav id="header-nav" class="navbar-default" role="navigation">
+		
+		<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-menu-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
-	        		<span class=”icon-bar”></span>
-	        		<span class=”icon-bar”></span>
-	        		<span class=”icon-bar”></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"	></span>
 				</button>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-   			 	<div class="collapse navbar-collapse navbar-right" id="collapsed-menu-1">
-   			 	<!-- <ul class="nav navbar-nav"> -->
-			     	<?php
-							wp_nav_menu( array(
-						    'theme_location'    => 'menu-1',
-						    'menu' 							=> 'primary',
-						    'menu_id'           => 'primary-menu',
-						    'depth'             => 2,
-						    'container'         => false,
-						    'container_class'   => 'collapse navbar-collapse',
-						    'container_id'      => 'bs-example-navbar-collapse-1',
-						    'menu_class'        => 'nav',
-						    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-						    'walker'            => new WP_Bootstrap_Navwalker(),
-							) );
-					?>
-				</div>
+		<!-- Display of company name and logo -->
+				<h1><a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php bloginfo( 'name' ); ?>
+				</a></h1>
 			</div> <!-- end .navbar-header-->
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+   		<!-- <ul class="nav navbar-nav"> -->
+	     	<?php
+				wp_nav_menu( array(
+
+				    'theme_location'    => 'menu-1',
+				    'menu'				=> 'primary',
+				    'depth'             => 2,
+				    'container'         => 'div',
+				    'container_class'   => 'collapse navbar-collapse',
+				    'container_id'      => 'collapsed-menu-1',
+				    'menu_class'        => 'nav navbar-nav navbar-right',
+				    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+				    'walker'            => new WP_Bootstrap_Navwalker()) 
+			    );
+			?>
+		</div><!-- .container-fluid -->
+	</nav><!-- #header-nav -->
 
 	<div id="content" class="site-content">

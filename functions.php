@@ -121,8 +121,10 @@ function assistanceinaction_scripts() {
 	$theme = wp_get_theme( 'assistanceinaction' );
     $version = $theme->get( 'Version' );
 
-	wp_enqueue_style( 'onepress-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', false, $version );
+	wp_enqueue_style( 'onepress-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', true, $version );
 	wp_enqueue_style( 'assistanceinaction-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'creative-blazer-style', get_stylesheet_directory_uri() . '/creative-style.css' );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'assistanceinaction-js-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), $version, true );
