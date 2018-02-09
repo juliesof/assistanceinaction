@@ -36,10 +36,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Site Title */
 .navbar-header h1 {
 	margin: 15px 0 10px;
+	font-size: 2.3em;
 }
 .navbar-header .site-branding {
 	font-family: 'Cinzel Decorative', cursive;
-	font-size: 1.3em;
 }
 .navbar-header .site-branding:hover {
 	text-decoration: none;
