@@ -67,6 +67,7 @@ button {
 	background: linear-gradient(to bottom right,#8c41f4 23%,#f244ff);
 	color: white;
 	font-size: 16px;
+	font-family: 'Cinzel Decorative', cursive;
 }
 button a {
 	color: white;
