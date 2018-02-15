@@ -32,8 +32,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*---------- Base Styles --------------*/
 
 /* Typography */
-
+@font-face {
+	font-family: 'Cinzel Decorative';
+	src: 	/*url(fonts/CinzelDecorative-Black.otf) format("opentype"),
+			url(fonts/CinzelDecorative-Bold.otf) format("opentype"),*/
+			url(fonts/CinzelDecorative-Regular.otf) format("opentype");
+	/*font-family: 'Cinzel';
+	src: 	url(fonts/Cinzel-Black.otf) format("opentype"),
+			url(fonts/Cinzel-Bold.otf) format("opentype"),
+			url(fonts/Cinzel-Regular.otf) format("opentype");*/
+}
+body {
+	color: #040f18;
+}
+.fs-title {
+	color: #4B3F72;
+}
+h1.fs-title {
+	font-size: 3em;
+}
 /*------ Site Title and Navbar --------*/
+#contact-info-header {
+	display: none;
+}
 .navbar-header h1 {
 	margin: 15px 0 10px 15px;
 	font-size: 2em;
@@ -41,37 +62,82 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .navbar-header .site-branding {
 	font-family: 'Cinzel Decorative', cursive;
+
 }
 .navbar-header .site-branding:hover {
 	text-decoration: none;
 }
-.navbar-default .navbar-nav>li>a {
-	color: purple;
+/* main navbar */
+#header-nav {
+	background: #fff;
+	transition: all 0.5s ease;
 }
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus, 
-.navbar-default .navbar-nav>.active>a:hover {
-	color: purple;
-	background-color: rgb(230,230,250);
+#header-nav h1,
+#header-nav a {
+	color: #4B3F72;
 }
-/* mobile button */
-.navbar-default .navbar-toggle {
-	border-color: purple;
+/* mobile nav button */
+#header-nav .icon-bar{
+	background: #4B3F72;
+}
+.header-nav .navbar-toggle {
+	border-color: #4B3F72;
 }
 #header-nav.navbar-default .navbar-toggle .icon-bar {
-	background-color: purple;
+	background-color: #fff;
 }
 .navbar-header .navbar-toggle {
 	margin-top: 13.5px;
 }
 @media (min-width: 768px) {
+	#header-nav {
+		height: 75px;
+	}
 	.navbar-nav>li>a {
 	    padding-top: 22.5px;
-	    padding-bottom: 22.5px;
+	    padding-top: 22.5px;
+	}
+	.navbar-nav>li>a:hover {
+		border-bottom: 5px solid #fff;
 	}
 	.navbar-header h1 {
+		font-size: 2.5em;
+	}
+	.navbar-header .site-branding {
+		
+	}
+	/*to be added when page is not scrolled (transparent navbar background)*/
+	#header-nav.not-scrolled {
+		background: transparent;
+		transition: all 0.5s ease;
+	}
+	#header-nav.not-scrolled h1,
+	#header-nav.not-scrolled a {
+		color: #fff;
+		text-shadow: 	-1px -1px 1px rgba(255,255,255,.5),
+						1px 1px 1px #0d3758,
+						2px 2px 1px #234967;
+		transition: all 0.2s ease;
+	}
+	#header-nav.scrolled {
+		box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+	}
+	#header-nav.scrolled h1,
+	#header-nav.scrolled a {
+		color: #4B3F72;
+		text-shadow: none;
+		transition: all 0.5s ease;
+	}
+	.navbar-header h1,
+	.navbar-header h1:visited {
 		margin-left: 0;
-		font-size: 2.3em;
+		font-size: 2.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	.navbar-header h1,
+	.navbar-header h1:visited {
+		font-size: 2em	;
 	}
 }
 
@@ -103,12 +169,12 @@ button a {
 				rgba(0, 0, 0, .3),
 				rgba(0, 0, 0, .3)
 			),
-			url(http://localhost:8888/santa/wp-content/uploads/2018/02/ripple-effect-caitlyn-stykowski.jpg) center;
+			url("http://localhost/santa/wp-content/uploads/2018/02/ripple-effect-caitlyn-stykowski.jpg") center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	height: calc(100vh - 85px);
+	height: calc(100vh);
 	padding: .3rem;
 }
 .hero-text {
@@ -143,7 +209,12 @@ button a {
 	margin-bottom: 1em;
 }
 
-/* Services section */
+/* ---------------------------------- About section ------------------------------------------------*/
+#about h2 {
+	margin-top:0;
+}
+
+/* ----------------------------------Services section ------------------------------------------------*/
 .service-box {
 	position: relative;
 	background: black;
@@ -151,36 +222,69 @@ button a {
 	text-align: center;
 	padding: 0;
 }
-.service-box img {
-	width: 100%
-	height: auto;
+/* dark overlay for text clarity */
+.service-box:before {
+	content: '';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background: rgba(0,0,0,0.3);
+	z-index: 2;
 }
+.service-content {
+	z-index: 3;
+}
+/*expand images on hover...slowly...*/
+.services-grid a:hover img {
+	transform: scale(1.2);
+	transition: all 6s ease;
+}
+/*for a smooth yet quick return*/
+.services-grid a img {
+	transition: all 1s ease;
+}
+/* ...it expands invisibly */
+.service-box {
+	overflow: hidden;
+}
+/*service text alignments*/
 .service-box .service-content {
 	position: absolute;
 	top: calc(200%/4.5);
 	text-align: center;
-	width: 100%
-}
-.service-box .service-content{
-	color: #cc5500;
+	width: 100%;
+	color: #fff;
 }
 .service-box .service-content h2 {
-	font-size: 4em;
+	font-size: 2.8em;
 }
 .service-box .service-content p {
 	font-size: 2em;
 }
-/* Testimonials */
+/* -----------------------Testimonials -------------------------*/
 #front-page-testimonials {
 	width: 100%;
 	margin-bottom: 2.5em;
+}
+/*quote icons*/
+.testimonial svg {
+	color: #4B3F72;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 6px;
+}
+.testimonial p {
+	display: inline-block;
+	width: 83.3333333333%;
 }
 #front-page-testimonials button {
 	margin-right: auto;
 	margin-left: auto;
 }
 
-/* CTA section */
+/* ----------------------CTA section------------------------------ */
 #cta-bar {
 	text-align: center;
 	padding: 2.5em;
@@ -254,17 +358,18 @@ button a {
 		text-align: right;
 	}
 	#header-email {
-		margin: 0 3.5em 0 2em;
+		margin: 0 15px 0 2em;
 	}
 
-	/* Hero */
+	/* --------------------Hero----------------------- */
 	#hero-section {
-		z-index: 0;
+		/*z-index: 0;*/
 	}
 
 	/* Teaser section */
 	#teaser-frontpage {
 		border-top: 10px #201E50 solid;
+		/*border-top: 10px solid #0d3758;*/
 		background-color: rgb(230,230,250);
 		margin-top: -107px;
 	}

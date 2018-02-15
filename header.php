@@ -31,7 +31,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'assistanceinaction' ); ?></a>
 
 	<div id="contact-info-header" class="container">
-		<div class="container">
+		<div class="row">
 			<div id="header-phone" class="contact-info col"><i class="fas fa-phone"></i><a href="tel:617-456-7890">
 				617-456-7890</a>
 			</div>
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<nav id="header-nav" class="navbar-default" role="navigation">
+	<nav id="header-nav" class="navbar-fixed-top not-scrolled" role="navigation">
 		
 		<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -48,7 +48,7 @@
 					<span class="sr-only">Toggle navigation</span>
 	        		<span class="icon-bar"></span>
 	        		<span class="icon-bar"></span>
-	        		<span class="icon-bar"	></span>
+	        		<span class="icon-bar"></span>
 				</button>
 		<!-- Display of company name and logo -->
 				<h1><a class="site-branding" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

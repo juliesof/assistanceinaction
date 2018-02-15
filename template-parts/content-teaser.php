@@ -1,5 +1,5 @@
 <div id="teaser-frontpage" class=" center-something">
-	<h1 id="teaser-header">Ask Yourself...</h1>
+	<h1 id="teaser-header" class="fs-title">Ask Yourself...</h1>
 
 	<div class="row justify-content-md-center teaser-content">
 		<div class="col-xs-12 col-md-4 first-teaser-question teaser-question">
