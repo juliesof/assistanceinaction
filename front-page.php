@@ -20,13 +20,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 			<!-- Start hero section -->
-			<div id="hero-section">
-				<div class="hero-text center-something">
-					<h1 class="text">Certified Life Coaching</h1>
-					<h2 class="text">Metro Washington&nbsp;DC and Eastern&nbsp;Shore Maryland</h2>
-				</div>
-			</div> <!--end #hero-section -->
-		<div class="container">
+			<?php get_template_part( 'template-parts/content', 'hero' ); ?>
 			<!-- Start teaser section -->
 			<?php get_template_part( 'template-parts/content', 'teaser' ); ?>
 			<!-- About Santa section -->
@@ -35,11 +29,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'services' ); ?>
 			<!-- Testimonials section -->
 			<?php get_template_part( 'template-parts/content', 'testimonials' ); ?>
-		</div>
 			<!-- Call to action bar -->
 			<?php get_template_part( 'template-parts/content', 'call-to-action-bar' ); ?>
-
-
 
 
 			<?php endwhile; // End of the loop.

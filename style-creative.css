@@ -1,0 +1,586 @@
+/*!
+Author: Creative Blazer
+Author URI: http://creativeblazer.com/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: assistanceinaction.com
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+AssistanceInAction is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+---------- Base Styles -----------
+# Typography
+# Site Title
+# Elements
+# Front page
+	# Section 1
+	# Section 2
+	# Section 3
+# Contact Header
+# Forms
+*/
+
+/*---------- Base Styles --------------*/
+
+/* Typography */
+@font-face {
+	font-family: 'Cinzel Decorative';
+	src: 	/*url(fonts/CinzelDecorative-Black.otf) format("opentype"),
+			url(fonts/CinzelDecorative-Bold.otf) format("opentype"),*/
+			url(fonts/CinzelDecorative-Regular.otf) format("opentype");
+	/*font-family: 'Cinzel';
+	src: 	url(fonts/Cinzel-Black.otf) format("opentype"),
+			url(fonts/Cinzel-Bold.otf) format("opentype"),
+			url(fonts/Cinzel-Regular.otf) format("opentype");*/
+}
+body {
+	color: #040f18;
+}
+.fs-title {
+	color: #4B3F72;
+}
+h1.fs-title {
+	font-size: 36px;
+}
+/*prevent _s from overriding alignleft class*/
+img.alignleft {
+	width: auto;
+}
+/*------ Site Title and Navbar --------*/
+/*to account for floating header*/
+#page {
+	padding-top: 75px;
+}
+/*.home #page {
+	padding-top: 0;
+}*/
+#contact-info-header {
+	display: none;
+}
+.navbar-header h1 {
+	margin: 15px 0 10px 15px;
+	font-size: 2em;
+	text-align: left;
+}
+.navbar-header .site-branding {
+	font-family: 'Cinzel Decorative', cursive;
+
+}
+.navbar-header .site-branding:hover {
+	text-decoration: none;
+}
+/* main navbar */
+#header-nav {
+	background: #fff;
+	transition: all 0.5s ease;
+}
+#header-nav.is-admin {
+	margin-top: 32px;
+}
+#header-nav h1,
+#header-nav a {
+	color: #4B3F72;
+}
+#menu-creative-1 a:hover {
+	color: #fff;
+	background: #4B3F72;
+}
+/*#menu-creative-1 a:focus {
+	background: #fff;
+}*/
+/* mobile nav button */
+#header-nav .icon-bar{
+	background: #4B3F72;
+}
+.header-nav .navbar-toggle {
+	border-color: #4B3F72;
+}
+#header-nav.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.navbar-header .navbar-toggle {
+	margin-top: 13.5px;
+}
+@media (min-width: 768px) {
+	#header-nav {
+		height: 75px;
+	}
+	.navbar-nav>li>a {
+	    padding-top: 22.5px;
+	    padding-bottom: 22.5px;
+	}
+	.navbar-nav>li>a:hover {
+		/*border-bottom: 5px solid #fff;*/
+	}
+	.navbar-header h1 {
+		font-size: 2.5em;
+	}
+	.navbar-header .site-branding {
+		
+	}
+	/*to be added when page is not scrolled (transparent navbar background)*/
+	.home #header-nav.not-scrolled {
+		background: transparent;
+		transition: all 0.5s ease;
+	}
+	.home #header-nav.not-scrolled h1,
+	.home #header-nav.not-scrolled a {
+		color: #fff;
+		text-shadow: 	-1px -1px 1px rgba(255,255,255,.5), /*white glow*/
+						1px 1px 1px #0d3758, /*blue*/
+						2px 2px 1px #234967; /*paler blue*/
+		text-shadow: 	0 0 2px #4b3f72, /*purple*/
+    					1px 1px 2px #4b3f72,
+    					2px 2px 2px #4b3f72;
+		transition: all 0.2s ease;
+	}
+	/*same shadow but without the white glow for menu items*/
+	.home #header-nav.not-scrolled #menu-creative-1 a {
+		text-shadow: 	1px 1px 1px #0d3758, /*blue*/
+						2px 2px 1px #234967; /*paler blue*/
+		text-shadow: 	0 0 2px #4b3f72, /*purple*/
+    					1px 1px 2px #4b3f72,
+    					2px 2px 2px #4b3f72;
+		transition: all 0.2s ease;
+	}
+	#header-nav.scrolled {
+		box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+	}
+	#header-nav.scrolled h1,
+	#header-nav.scrolled a {
+		color: #4B3F72;
+		text-shadow: none;
+		transition: all 0.5s ease;
+	}
+	.navbar-header h1,
+	.navbar-header h1:visited {
+		margin-left: 0;
+		font-size: 2.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	.navbar-header h1,
+	.navbar-header h1:visited {
+		font-size: 1.75em;
+	}
+}
+
+#about,
+#services {
+	padding-bottom: 4.5em;
+}
+
+/* centers image created with wp_get_image_attachment */
+.center-wp-img {
+	text-align: center;
+}
+button {
+	padding: 15px 20px;
+	border-radius: 50px;
+	background: linear-gradient(to bottom right,#8c41f4 23%,#f244ff);
+	color: white;
+	font-size: 16px;
+	font-family: 'Cinzel Decorative', cursive;
+}
+button a {
+	color: white;
+	font-size: 16px;
+}
+
+/*Front Page Hero*/
+#hero-section {
+	/*background: linear-gradient( 
+				rgba(0, 0, 0, .3),
+				rgba(0, 0, 0, .3)
+			),
+			url("http://localhost/santa/wp-content/uploads/2018/02/ripple-effect-caitlyn-stykowski.jpg") center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+	height: auto;
+}
+
+/*#hero-section:before{
+	content: '';
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background: rgba(0,0,0,0.05);
+}*/
+#hero-section video {
+	width: 100%;
+}
+.hero-content {
+    margin-top: 25vh;
+    /*background: rgba(0,0,0,0.5);*/
+    /*background: -webkit-radial-gradient(50% 50%, circle , black, rgba(0,0,0,0) );*/
+}
+.hero-text h1 {
+	font-family: 'Cinzel', serif;
+}
+.hero-text h2 {
+	font-family: 'Raleway', sans-serif;
+}
+.hero-text h1,
+.hero-text h2 {
+	/*margin: .5rem;
+	padding: .5rem;*/
+	text-align: center;
+	color: white;
+	text-shadow: 	1px 1px 1px #0d3758, /*blue*/
+					2px 2px 1px #234967; /*paler blue*/
+	text-shadow: 	0 0 2px #4b3f72, /*purple*/
+					1px 1px 2px #4b3f72,
+					2px 2px 2px #4b3f72,
+					3px 3px 2px #4b3f72;
+}
+/*-------------------hero buttons-----------------*/
+#hero-section button {
+	font-size: 1.1em;
+}
+/*-------------------Front Page Sections Universal-----------------*/
+.fog-white {
+	background: rgba(255,255,255,1);
+}
+/*-------------------------------------------Front Page Teaser---------------------------------------------*/
+#teaser-frontpage {
+	/*background: linear-gradient( 
+				rgb(230,230,250) 70%,
+				rgb(255,255,255)
+			);
+	padding: .75em 1.25em;*/
+}
+#teaser-header{	
+	text-align: center;
+}/*
+#teaser-frontpage h1 {
+	margin-bottom: 1.2em;
+}
+#teaser-frontpage h3 {
+	margin-bottom: .25em;
+}*/
+.teaser-question {
+	margin-bottom: 1em;
+}
+
+/* ---------------------------------- About section ------------------------------------------------*/
+#about h2 {
+	margin-top:0;
+}
+.about-content {
+	margin-top: 4em;
+}
+
+/* ----------------------------------Services section ------------------------------------------------*/
+.service-box {
+	position: relative;
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 0;
+}
+/* dark overlay for text clarity */
+.service-box:before {
+	content: '';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background: rgba(0,0,0,0.3);
+	z-index: 2;
+}
+.service-content {
+	z-index: 3;
+}
+/*expand images on hover...slowly...*/
+.services-grid a:hover img {
+	transform: scale(1.2);
+	transition: all 6s ease;
+}
+/*for a smooth yet quick return*/
+.services-grid a img {
+	transition: all 1s ease;
+}
+/* ...it expands invisibly */
+.service-box {
+	overflow: hidden;
+}
+/*service text alignments*/
+.service-box .service-content {
+	position: absolute;
+	top: calc(200%/4.5);
+	text-align: center;
+	width: 100%;
+	color: #fff;
+}
+.service-box .service-content h2 {
+	font-size: 1.8em;
+}
+.service-box .service-content p {
+	font-size: 1.5em;
+}
+/*@media (min-width: 768px) and (max-width: 991px) {
+	.service-box .service-content h2 {
+		font-size: 1.8em;
+	}
+	.service-box .service-content p {
+		font-size: 1.5em;
+	}	
+}*/
+/* -----------------------Testimonials -------------------------*/
+#front-page-testimonials {
+	width: 100%;
+	padding-bottom: 2.5em;
+}
+/*quote icons*/
+.testimonial svg {
+	color: #4B3F72;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 6px;
+}
+.testimonial p {
+	display: inline-block;
+	width: 83.3333333333%;
+}
+#front-page-testimonials button {
+	margin-right: auto;
+	margin-left: auto;
+}
+.testimonials-cta {
+	text-align: center;
+}
+
+/* ----------------------CTA section------------------------------ */
+#cta-bar {
+	text-align: center;
+	padding: 2.5em;
+	background: #201E50;
+	color: white;
+	line-height: 6em;
+}
+#cta-bar h2 {
+	color: #fff;
+}
+#front-page-cta-button button {
+	text-align: center;
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 1.25em;
+}
+
+/*-------------------------------------Service Pages------------------------------------*/
+.service-header-image img {
+	width: 100%
+	height: auto;
+}
+/*
+.service-header-image img {
+	position: relative;
+	top: -133%;
+}*/
+/*-------------------------------------Blog Pages------------------------------------*/
+.blog article {
+	padding: 1em 0;
+}
+
+/*------------------------------------Contact Header------------------------------------*/
+#contact-info-header{
+	background-color: rgb(230,230,250);
+	width: 100%;
+	text-align: right;
+	font-size: 14px;
+	line-height: 2.25em;
+}
+.contact-info {
+	text-align: center;
+}
+.contact-info a,
+.contact-info a:hover {
+	color: #483D8B;
+}
+
+/*----------------------------------------Footer------------------------------------*/
+.site-ankler {
+	padding-top: 15vh;
+}
+
+.site-footer {
+	background-color: #063852;
+}
+.footer-contact-info {
+	margin-bottom: 1.25em;
+}
+.footer-content,
+.footer-content a,
+.footer-content a:hover {
+	color: white;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+}
+#footer-phone, #footer-email {
+	margin-top: 3em;
+}
+#footer-contact-info h4 {
+	font-weight: 600;
+}
+.site-info {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: white;
+	text-align: center;
+	padding: .4em;
+}
+
+/*----------------------------------------Forms------------------------------------*/
+/*ninja form in footer*/
+/*.footer-content{
+	padding-top: 30px;
+}*/
+#nf-form-2-cont .nf-field-container{
+	margin-bottom: 1.28205128205%;
+}
+#nf-form-2-cont .ghostly-form {
+	background-color: rgba(255,255,255,.4);
+	border:none;
+	padding-left: 5px;
+	color: #fff;
+	font-size: 1em;
+}
+#nf-form-2-cont .ninja-forms-field::placeholder{
+	color:#fff;
+	font-size: 1em;
+}/*
+.nf-before-form-content {
+	display:none;
+}*/
+#nf-field-7 {
+	height: 150px;
+}
+/*submit-button*/
+#nf-form-2-cont input#nf-field-8 {
+	background-color: #4b3f72;
+	width:100%;
+	font-size: 1em;
+	height: 100%;
+	border: 1px #4b3f72;
+	color: #fff;
+}
+#nf-form-2-cont input#nf-field-8:hover {
+	background-color: #119DA4;
+}
+
+/* Media query 768px*/
+@media (min-width: 768px) {
+
+	/* contact header */
+	#contact-info-header .contact-info {
+		display: inline-block;
+	}
+	.contact-info {
+		text-align: right;
+	}
+	#header-email {
+		margin: 0 15px 0 2em;
+	}
+
+	/* --------------------Hero----------------------- */
+	#hero-video {
+		position: fixed;
+		top:75px;
+		z-index: -100;
+	}
+	.hero-text h1 {
+		font-size: 2em;
+	}
+	.hero-text h2 {
+		font-size: 1.8em;
+	}
+	#hero-section {
+		height: 90vh;
+	}
+	#hero-section .buttons {
+		margin-top: .67em;
+		margin-bottom: .67em;
+	}
+	button.btn-quotidian {
+		background-color: #4B3F72;
+		border: #4B3F72;
+	}
+	.btn-primary:hover {
+		background-color: #119da4;
+		border: #119da4;
+	}
+	.btn-secondary {
+		background-color: #fff;
+		color: #040f18;
+	}
+
+	/* --------------------Teaser Section----------------------- */
+	#teaser-frontpage {
+	}
+	#teaser-frontpage .container {
+		position: relative;
+		top: -90px;
+		border-top: 10px #201E50 solid;
+		/*border-top: 10px solid #0d3758;*/
+		background-color: rgb(230,230,250);
+	}
+	#teaser-frontpage h3 {
+		margin-top: 0;
+	}/*
+	#teaser-frontpage .teaser-content {
+		padding-bottom: 3.5em;
+	}*/
+
+
+	/* --------------------CTA Bar----------------------- */
+	#cta-bar {
+		padding: 3em;
+	}
+
+	/* --------------------Footer----------------------- */
+	.site-footer {
+		height: 80vh;
+		position: relative;
+		background: 
+			linear-gradient( 
+				rgba(0, 0, 0, .4),
+				rgba(0, 0, 0, .4)
+			),
+		 url(images/sunset-on-chester.jpg) center fixed;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+	}
+	.site-ankler {
+		text-align: center;
+	}
+}
+/*--------------------------------------large devices--------------------------------------*/
+@media (min-width: 1199px)  {
+	.hero-text h1 {
+		font-size: 2.5em;
+	}
+	.hero-text h2 {
+		max-width: 80%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-size: 2em;
+	}
+}
