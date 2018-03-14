@@ -19,10 +19,6 @@
 
 	<!-- google font links -->
 	<link href="https://fonts.googleapis.com/css?family=Laila|Alegreya+Sans:100,300,400|Cinzel+Decorative" rel="stylesheet">
-
-	<!-- include font awesome -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
 	<?php wp_head(); ?>
 </head>
 
@@ -39,7 +35,7 @@
 			</div>
 		</div>
 	</div>
-	<nav id="header-nav" class="navbar-fixed-top not-scrolled" role="navigation">
+	<nav id="header-nav" class="navbar-fixed-top scrolled" role="navigation">
 		
 		<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->

@@ -113,6 +113,40 @@ function assistanceinaction_widgets_init() {
 }
 add_action( 'widgets_init', 'assistanceinaction_widgets_init' );
 
+// Add  a js parameter to font awesome cdn link, defer="defer"
+add_filter( 'script_loader_tag', function ( $tag, $handle ) {
+
+    if ( 'font-awesome-cdn' !== $handle )
+        return $tag;
+
+    return str_replace( ' src', ' defer="defer" src', $tag );
+}, 10, 2 );
+
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function cb_read_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'cb_read_more' );
+
+
+/**
+ * Enqueue scripts and styles.
+ */
+// function google_fonts() {
+// 	$query_args = array(
+// 		'family' => 'Cinzel+Decorative|Cinzel:700',
+// 		'subset' => 'latin,latin-ext'
+// 	);
+// 	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+//             }
+            
+// add_action('wp_enqueue_scripts', 'google_fonts');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -124,7 +158,9 @@ function assistanceinaction_scripts() {
 	wp_enqueue_style( 'onepress-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', true, $version );
 	wp_enqueue_style( 'assistanceinaction-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'creative-blazer-style', get_stylesheet_directory_uri() . '/creative-style.css' );
+	wp_enqueue_style( 'creative-blazer-style', get_stylesheet_directory_uri() . '/style-creative.css' );
+
+	wp_enqueue_style( 'custom-google-fonts', '//fonts.googleapis.com/css?family=Cinzel+Decorative|Cinzel:700|Lato&amp;subset=latin-ext' );
 
 	wp_enqueue_script('jquery');
 
@@ -132,6 +168,7 @@ function assistanceinaction_scripts() {
 	wp_enqueue_script( 'assistanceinaction-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'assistanceinaction-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js', array(), $version, true );
 
 	wp_enqueue_script( 'creative-js',  get_template_directory_uri() . '/js/creative.js', array(), $version, true );
 
@@ -171,3 +208,39 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Custom post types function for testimonials
+function create_custom_post_types(){
+// Create testimonials post type
+	register_post_type('testimonials',
+		array(
+		'labels' => array(
+			'name' => __('Testimonials'),
+			'singular_name' => __('Testimonial'),
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_nav_menus' => true,
+		'rewrite' => array (
+			'slug' => 'testimonials'
+			),
+		)
+	);
+	// Create services post type
+	register_post_type('services',
+		array(
+		'labels' => array(
+			'name' => __('Services'),
+			'singular_name' => __('Service'),
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_nav_menus' => true,
+		'rewrite' => array (
+			'slug' => 'services'
+			),
+		)
+	);
+}
+
+// Hook this custom post type function into the theme
+add_action('init', 'create_custom_post_types');
